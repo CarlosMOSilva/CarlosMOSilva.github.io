@@ -1,25 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inline vs. Block Elements</title>
+    <meta charset="UTF-8">
+    <title>JS Bejeweled Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
 </head>
-<body>
-  <h1>Explore California</h1>
-  <p>The official state flag of California was designed by William Todd and first used on June 14, 1846. The flag was not
-  officially adopted until 1911. The flag features a grizzly bear, a red bar, a star and is one of the most recognizable
-  state flags in the Nation.
-</p>
+<body class="background_text">
+<img class="image_background" alt="back" src="images/bad_jedi.jpg">
+    <div id="test_zone">
+        <div class="player_options_zone">
+            <div class="button_zone">
+                <button class="background_text btn_text_new_game" id="btn_new_game" type="button">New Game</button>
+                <span class="hilt_new_game"></span>
+                <span class="light_new_game"></span>
+            </div>
+            <div id="inputs_zone">
+                <div class="inputs">
+                <span class="input_zone">
+                    <h6>Board Size:</h6>
+                    <span id="inp_board_size_val">8</span>
+                    <input id="inp_board_size" value="8" type="range" min="2" max="100"/>
+                </span>
+                    <span class="input_zone">
+                    <h6>Number of pieces to Win:</h6>
+                    <span id="inp_win_size_val">4</span>
+                    <input id="inp_win_size" value="4" type="range" min="2" max="100"/>
+                </span>
+                </div>
+            </div>
 
-  <h2>Tour Spotlight</h2>
-  <p>This month's spotlight package is <a href="https://explorecalifornia.org/">Cycle California</a>. Whether you are looking for some serious downhill thrills to a
-  relaxing ride along the coast, you'll find something to love in Cycle California.
-  </p>
-  <p>Join us each month as we publish a new <a href="https://explorecalifornia.org/">Explore California</a> video podcast, with featured tours, customer photos, and some
-  exciting new features
-</p>
-  
+        </div>
+        <div class="player_zone">
+            <div class="board_zone">
+                <div class="show_zone">
+
+                </div>
+            </div>
+            <div class="result_zone">
+                <span id="clock">00h:00m:00s</span>
+                <div class="result_container">
+                    <h2 id="result">0</h2>
+                </div>
+                <div class="shuffle_zone">
+                    <span class="background_text">Shuffle Board</span>
+                    <button id="btn_shuffle_board" class="text" type="button"><span class="img_back_btn_shuffle"></span></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</img>
+<audio data-key="1" src="sounds/lightsaber_on.wav"></audio>
+<audio data-key="2" src="sounds/lightsaber_moving.mp3"></audio>
+<audio data-key="3" src="sounds/lightsaber_clash.mp3"></audio>
+<audio data-key="4" src="sounds/boom-kick.wav"></audio>
+<audio data-key="5" src="sounds/game-sound-incorrect-with-delay.wav"></audio>
+<audio data-key="6" src="sounds/breaking-glass.wav"></audio>
+<audio data-key="7" src="sounds/lightsaber_off.wav"></audio>
+
+<script src="scripts.js"></script>
 </body>
 </html>

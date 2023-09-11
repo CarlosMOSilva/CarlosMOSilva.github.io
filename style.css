@@ -1,0 +1,235 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    flex: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.image_background {
+    z-index: -1;
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+}
+
+#test_zone {
+    align-items: center;
+}
+
+.square {
+    position: relative;
+    border: black;
+    background-color: cadetblue;
+}
+
+.piece {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 20;
+}
+
+.show {
+    position: absolute;
+}
+
+.highlight {
+    transform: scale(1.3);
+    border: black;
+    z-index: 21;
+}
+
+.move_hint {
+    transform: scale(1.4);
+}
+
+.destroy {
+    transform: scale(0);
+}
+
+.dropping {
+    transition: all 1s;
+}
+
+.player_options_zone {
+    border: black solid 1px;
+}
+
+.player_zone {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.board_zone {
+    margin: 10px;
+}
+
+.result_zone {
+    margin: 10px;
+    align-content: center;
+    align-items: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.result_container {
+    align-content: center;
+    align-items: center;
+    flex-grow: 1;
+    display: flex;
+}
+
+#result {
+    align-items: center;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.button_zone {
+    width: 100%;
+    height: 30px;
+    position: relative;
+    align-items: center;
+    align-content: space-between;
+}
+
+.board {
+
+}
+
+
+
+#btn_new_game {
+    position: absolute;
+    background-color: black;
+    height: 100%;
+    width: 100px;
+}
+
+#btn_new_game:hover {
+    background-color: gray;
+}
+
+.hilt_new_game {
+    position: absolute;
+    background-image: url("images/hilt.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 3px;
+    left: 100px;
+    padding-left: 100px;
+    bottom: 3px;
+    z-index: 11;
+}
+
+.light_new_game {
+    position: absolute;
+    transition: all 1s;
+    background-image: url("images/light.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 3px;
+    left: 100px;
+    padding-left: 88px;
+    bottom: 3px;
+    width: 0px;
+    background-clip: content-box;
+    z-index: 10;
+}
+
+.light_new_game_hover {
+    width: 350px;
+    background-clip: content-box;
+}
+
+#btn_shuffle_board {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    font-size: 50%;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.shuffle_hint {
+    height: 80px;
+    width: 80px;
+    font-size: 50%;
+    transform: rotate(360deg);
+}
+
+.text {
+    /*font-size:1.5vw;*/
+}
+
+.background_text {
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Audiowide';
+    font-size: 22px;
+    text-shadow: 4px 4px 4px #292929;
+}
+
+.background_text .btn_text_new_game {
+    font-size: 10px;
+}
+
+.shuffle_zone {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.img_back_btn_shuffle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.img_back_btn_shuffle_hover {
+    transition: all 1s;
+    background-image: url("gifs/jedi_fight.gif");
+    background-size: cover;
+    transform: rotate(-360deg);
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn_shuffle_board:hover {
+    transition: all 1s;
+    transform: rotate(360deg);
+    height: 200px;
+    width: 200px;
+}
+
+.input_zone {
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    align-items: center;
+    align-content: center;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: row;
+}
+
+#inp_board_size_val, #inp_win_size_val {
+    align-items: center;
+    align-content: center;
+    margin: 0 10px;
+}
