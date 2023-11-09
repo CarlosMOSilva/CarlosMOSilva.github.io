@@ -1,0 +1,149 @@
+
+body {
+    box-sizing: border-box;
+}
+
+.title {
+    margin: 20px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+#info-box {
+    display: flex;
+    justify-content: stretch;
+    align-content: stretch;
+}
+
+.input-box {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 200px;
+    width: 400px;
+    border: 2px solid black;
+}
+
+.div-cells-alive {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    min-width: 60px;
+}
+
+#num-cells-alive {
+    border: 2px solid black;
+    padding: 5px;
+    font-weight: bold;
+    min-width: 20px;
+}
+
+.timer-box {
+    box-sizing: border-box;
+    display: flex;
+    padding: 10px;
+    align-items: stretch;
+    justify-content: stretch;
+}
+
+.lbl-generation {
+    margin: auto;
+    text-align: center;
+    font-size: large;
+}
+
+#lbl-gen-number {
+    border-top: 2px solid black;
+}
+
+.counter {
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    font-size: xxx-large;
+    font-weight: bold;
+    border: 2px solid black;
+}
+
+.hide {
+    display: none;
+}
+
+#div-btn-stop-simulation {
+    margin: auto;
+}
+
+.inp-form, .div-btn {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.div-btn {
+    justify-content: center;
+    align-items: center;
+}
+
+#div-btn-simulate {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+}
+
+#btn-simulate-forever, #btn-export {
+    margin-top: 10px;
+}
+
+.messages {
+    height: 15px;
+    margin: 5px;
+    box-sizing: border-box;
+    color: red;
+}
+
+.grid {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    gap: 2px;
+}
+
+.grid-item {
+    box-sizing: border-box;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    transition: background-color 1s;
+    cursor: pointer;
+    font-size: 0;
+}
+
+.live {
+    background: black;
+}
+
+.dead {
+    background: white;
+}
+
+.live:hover {
+    border: 2px solid yellow;
+}
+
+.dead:hover {
+    border: 2px solid black;
+}
+
+
+

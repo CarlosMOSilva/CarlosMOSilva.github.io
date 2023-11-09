@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game of Life</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script type="module" src="scripts/cell.js"></script>
+    <script type="module" src="scripts/script.js"></script>
+  </head>
+  <body>
+    <main class="main-content">
+      <h1 class="title">Game of Life</h1>
+      <div id="info-box">
+        <div class="div-cells-alive">Cells
+          <div id="num-cells-alive">000</div>
+        </div>
+        <div class="input-box">
+          <label id="lbl-sel-board" class="inp-form" for="sel-board"> Choose a board:
+            <select name="board" id="sel-board">
+              <option value="0">--Please choose an option--</option>
+            </select>
+          </label>
+          <div class="div-btn" id="div-btn-board">
+            <button id="btn-reset">Reset</button>
+            <button id="btn-export">Export</button>
+          </div>
+          <label id="lbl-gen-number" class="inp-form" for="gen-input">Number of generations:
+            <input id="gen-input" type="number" value="1" min="0">
+          </label>
+          <div class="div-btn" id="div-btn-simulate">
+            <button id="btn-simulate">1 GEN</button>
+          </div>
+          <label id="lbl-gen-delay" class="inp-form" for="gen-delay">Delay (ms):
+            <input id="gen-delay" type="number" value="0" min="0">
+          </label>
+          <div class="div-btn" id="div-btn-simulate-n">
+            <button id="btn-simulate-n">N GEN</button>
+            <button id="btn-simulate-forever">&#8734 GEN</button>
+          </div>
+        </div>
+        <div class="input-box timer-box hide">
+          <div class="lbl-generation">Generation
+            <div class="counter"></div>
+          </div>
+          <div id="div-btn-stop-simulation">
+            <button id="btn-stop-simulation">STOP</button>
+          </div>
+        </div>
+      </div>
+      <h4 class="messages"></h4>
+      <div class="grid">
+      </div>
+    </main>
+  </body>
+</html>
