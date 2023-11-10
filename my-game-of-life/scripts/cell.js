@@ -37,7 +37,9 @@ class Cell {
     div.classList.add(`${this.state === 1 ? "live" : "dead"}`);
     div.innerText = this.state;
     div.addEventListener("click", () => {
-      this.toggleState();
+      if (document.querySelector(".timer-box").classList.contains("hide")) {
+        this.toggleState();
+      }
     });
     return div;
   }

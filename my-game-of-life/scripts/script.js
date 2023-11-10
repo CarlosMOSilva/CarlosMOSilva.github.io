@@ -100,34 +100,23 @@ const stopTimer = () => {
   }
 };
 
-btnSimulateN.addEventListener("click", () => {
+const runGeneration = (type) => {
   if (!intervId) {
     const numGen = genInput.value === "" ? 0 : Number(genInput.value);
     const delay = genDelayInp.value === "" ? 0 : Number(genDelayInp.value);
-    if (numGen <= 0) {
+    if (Number(numCellsAlive.innerText) === 0) {
+      createMessage("All cells are dead :(");
+      return;
+    }
+    if (type === 2 && numGen <= 0) {
       createMessage("Gen number must be greater than 0");
       return;
     }
-    if (delay < 0) {
+    if (type === 2 && delay < 0) {
       createMessage("Must insert a delay equal or greater than 0");
       return;
     }
-    nFactor = 0;
-    intervId = setInterval(() => {
-      nFactor++;
-      showCounter();
-      changeAllCellsState();
-      if ((numGen - nFactor) === 0 || !boardChanged) {
-        stopTimer();
-      }
-    }, delay);
-  }
-});
-
-btnSimulateForever.addEventListener("click", () => {
-  if (!intervId) {
-    const delay = genDelayInp.value === "" ? 0 : Number(genDelayInp.value);
-    if (delay <= 0) {
+    if (type === 3 && delay <= 0) {
       createMessage("Must insert a delay greater than 0");
       return;
     }
@@ -135,17 +124,17 @@ btnSimulateForever.addEventListener("click", () => {
     intervId = setInterval(() => {
       nFactor++;
       showCounter();
-      changeAllCellsState();
-      if (!boardChanged) {
+      changeCellsState();
+      if (type === 1 || (type === 2 && (numGen - nFactor) === 0) || !boardChanged) {
         stopTimer();
       }
-    }, delay);
+    }, type === 1 ? 0 : delay);
   }
-});
+}
 
-btnSimulate.addEventListener("click", () => {
-  changeAllCellsState();
-});
+btnSimulate.addEventListener("click", () => runGeneration(1));
+btnSimulateN.addEventListener("click", () => runGeneration(2));
+btnSimulateForever.addEventListener("click", () => runGeneration(3));
 
 btnReset.addEventListener("click", () => {
   generateBoardWithCommonForm(boardMap.get(Number(selBoard.value)));
@@ -161,7 +150,7 @@ btnExport.addEventListener("click", () => {
   console.log(cells.map(line => line.map(cell => cell.state)));
 });
 
-const changeAllCellsState = () => {
+const changeCellsState = () => {
   boardChanged = false;
   cells.forEach(line => line.forEach(cell => cell.nearCellsAlive = getNearCellsAlive(cell)));
   cells.forEach(line => line.forEach(cell => {
