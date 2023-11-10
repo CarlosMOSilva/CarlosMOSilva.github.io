@@ -147,7 +147,7 @@ btnStopSimulation.addEventListener("click", () => {
 });
 
 btnExport.addEventListener("click", () => {
-  console.log(cells.map(line => line.map(cell => cell.state)));
+  alert(JSON.stringify(cells.map(line => line.map(cell => cell.state))))
 });
 
 const changeCellsState = () => {
