@@ -1,0 +1,31 @@
+{
+  "name": "carlosmosilva.github.io",
+  "version": "1.0.0",
+  "description": "Repository to static website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarlosMOSilva/CarlosMOSilva.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarlosMOSilva/CarlosMOSilva.github.io/issues"
+  },
+  "homepage": "https://github.com/CarlosMOSilva/CarlosMOSilva.github.io#readme",
+  "dependencies": {
+    "@babel/core": "^7.23.3",
+    "@babel/node": "^7.22.19",
+    "@babel/preset-env": "^7.23.3"
+  },
+  "devDependencies": {
+    "eslint": "8.22.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-immutable": "^1.0.0",
+    "eslint-plugin-import": "^2.29.0"
+  }
+}
